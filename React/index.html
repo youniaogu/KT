@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Redux.html" />
+    <link rel="next" href="Redux/" />
     
     
     <link rel="prev" href="../Javascript/" />
@@ -94,7 +94,7 @@
                 <a href="../">
             
                     
-                    Introduction
+                    介绍
             
                 </a>
             
@@ -155,12 +155,25 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="Redux.html">
+        <li class="chapter " data-level="1.5.1" data-path="Redux/">
             
-                <a href="Redux.html">
+                <a href="Redux/">
             
                     
                     Redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="React-Redux/">
+            
+                <a href="React-Redux/">
+            
+                    
+                    React-Redux
             
                 </a>
             
@@ -178,7 +191,7 @@
                 <a href="../Other/">
             
                     
-                    Other
+                    其他
             
                 </a>
             
@@ -233,6 +246,60 @@
                                 
                                 <h2 id="react">React</h2>
 <h3 id="&#x4E00;&#x3001;react-&#x4F18;&#x5316;">&#x4E00;&#x3001;React &#x4F18;&#x5316;</h3>
+<h4 id="&#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6;&#x65F6;&#x4F7F;&#x7528;-evttargetdataset-&#x4EE3;&#x66FF;&#x5DE5;&#x5382;&#x51FD;&#x6570;">&#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6;&#x65F6;&#x4F7F;&#x7528; evt.target.dataset &#x4EE3;&#x66FF;&#x5DE5;&#x5382;&#x51FD;&#x6570;</h4>
+<p>&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F8B;&#x5B50;&#x4E00;&#xFF0C;&#x6539;&#x7528;&#x4F8B;&#x5B50;&#x4E8C;&#x7684;&#x5199;&#x6CD5;</p>
+<h5 id="&#x4F8B;&#x5B50;&#x4E00;&#xFF1A;">&#x4F8B;&#x5B50;&#x4E00;&#xFF1A;</h5>
+<pre><code>handleClick = (index) =&gt; {
+  return () =&gt; {
+    console.log(index)
+  }
+}
+
+{
+  list.map((obj, index) =&gt; {
+    return &lt;div key={index} onClick={this.handleClick(index)}&gt;index&lt;/div&gt;
+  })
+}
+</code></pre><h5 id="&#x4F8B;&#x5B50;&#x4E8C;&#xFF1A;">&#x4F8B;&#x5B50;&#x4E8C;&#xFF1A;</h5>
+<pre><code>handleClick = evt =&gt; {
+  console.log(evt.target.dataset.index)
+}
+
+{
+  list.map((obj, index) =&gt; {
+    return &lt;div data-index={index} key={index} onClick={this.handleClick}&gt;index&lt;/div&gt;
+  })
+}
+</code></pre><h3 id="&#x4E8C;&#x3001;props">&#x4E8C;&#x3001;Props</h3>
+<p><a href="https://reactjs.org/docs/typechecking-with-proptypes.html" target="_blank">PropTypes&#x7C7B;&#x578B;&#x68C0;&#x67E5;:</a></p>
+<pre><code>import PropTypes from &apos;prop-types&apos;;
+
+class testComponent extends Component {
+  render () {
+    return (
+      &lt;p&gt;{this.props.text}&lt;/p&gt;
+    )
+  }
+}
+
+testComponent.propTypes = {
+  text: PropTypes.string.isRequired, //text&#x7C7B;&#x578B;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E14;&#x5FC5;&#x4F20;
+  children: PropTypes.element.isRequired, //&#x8868;&#x660E;testComponent&#x4F7F;&#x7528;&#x65F6;&#x5185;&#x90E8;&#x5FC5;&#x987B;&#x5D4C;&#x5957;react&#x5143;&#x7D20;
+}
+</code></pre><p><strong>PropTypes&#x548C;TS&#x7684;type check&#xFF08;&#x4E0B;&#x9762;&#x7B80;&#x79F0;TC&#xFF09;&#x533A;&#x522B;</strong></p>
+<ul>
+<li>TC&#x662F;&#x7F16;&#x8BD1;&#x65F6;&#x68C0;&#x67E5;&#xFF0C;&#x800C;PropTypes&#x662F;&#x8FD0;&#x884C;&#x65F6;&#x68C0;&#x67E5;</li>
+<li>TC&#x66F4;&#x6CE8;&#x91CD;&#x4F20;&#x53C2;&#x548C;&#x8FD4;&#x56DE;&#x503C;&#x68C0;&#x6D4B;&#xFF0C;&#x800C;PropTypes&#x5219;&#x662F;&#x5BF9;prop&#x7684;&#x9650;&#x5236;</li>
+<li>PropTypes&#x7F3A;&#x5C11;&#x5BF9;null&#x548C;undenfined&#x7684;&#x68C0;&#x67E5;</li>
+</ul>
+<p><a href="%22https:/reactjs.org/docs/typechecking-with-proptypes.html#proptypes%22">PropTypes&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7684;&#x7C7B;&#x578B;</a></p>
+<p><a href="%22https:/reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values%22">defaultProps&#x5B9A;&#x4E49;props&#x7684;&#x9ED8;&#x8BA4;&#x503C;:</a></p>
+<pre><code>testComponent.defaultProps = {
+  text: &apos;hello world&apos;,
+}
+</code></pre><h3 id="&#x4E09;&#x3001;&#x4E0A;&#x4E0B;&#x6587;content">&#x4E09;&#x3001;&#x4E0A;&#x4E0B;&#x6587;(content)</h3>
+<h3 id="&#x56DB;&#x3001;diff&#x7B97;&#x6CD5;">&#x56DB;&#x3001;diff&#x7B97;&#x6CD5;</h3>
+<p>&#x53C2;&#x8003;&#x8D44;&#x6599;&#xFF1A;<a href="%22https:/github.com/zmmbreeze/blog/issues/9%22">&#x4E2D;&#x6587;&#x7FFB;&#x8BD1;</a>&#xFF0C;<a href="%22https:/calendar.perfplanet.com/2013/diff/%22">&#x82F1;&#x6587;&#x539F;&#x7248;</a></p>
 
                                 
                                 </section>
@@ -265,7 +332,7 @@
                 </a>
                 
                 
-                <a href="Redux.html" class="navigation navigation-next " aria-label="Next page: Redux">
+                <a href="Redux/" class="navigation navigation-next " aria-label="Next page: Redux">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -276,7 +343,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React","level":"1.5","depth":1,"next":{"title":"Redux","level":"1.5.1","depth":2,"path":"React/Redux.md","ref":"./React/Redux.md","articles":[]},"previous":{"title":"Javascript","level":"1.4","depth":1,"path":"Javascript/README.md","ref":"./Javascript/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"React/README.md","mtime":"2020-06-07T06:10:52.012Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-07T05:59:51.978Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React","level":"1.5","depth":1,"next":{"title":"Redux","level":"1.5.1","depth":2,"path":"React/Redux/README.md","ref":"./React/Redux/README.md","articles":[]},"previous":{"title":"Javascript","level":"1.4","depth":1,"path":"Javascript/README.md","ref":"./Javascript/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"React/README.md","mtime":"2020-06-10T07:24:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-10T07:24:10.675Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -284,10 +351,6 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
