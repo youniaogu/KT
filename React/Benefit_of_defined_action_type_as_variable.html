@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Redux · GitBook</title>
+        <title>将 Action 定义为变量的好处 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -12,20 +12,20 @@
         
         
     
-    <link rel="stylesheet" href="../../gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/style.css">
 
     
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
                 
             
         
@@ -53,14 +53,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../React-Redux/" />
+    <link rel="next" href="How_to_build_a_simple_react-redux.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="README.md" />
     
 
     </head>
@@ -89,9 +89,9 @@
         
         
     
-        <li class="chapter " data-level="1.1" data-path="../../">
+        <li class="chapter " data-level="1.1" data-path="../">
             
-                <a href="../../">
+                <a href="../">
             
                     
                     介绍
@@ -102,48 +102,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../../Html/">
+        <li class="chapter " data-level="1.2" data-path="README.md">
             
-                <a href="../../Html/">
-            
-                    
-                    Html
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="../../Css/">
-            
-                <a href="../../Css/">
-            
-                    
-                    Css
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" data-path="../../Javascript/">
-            
-                <a href="../../Javascript/">
-            
-                    
-                    Javascript
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5" data-path="../">
-            
-                <a href="../">
+                <span>
             
                     
                     React
@@ -155,12 +116,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.5.1" data-path="./">
+        <li class="chapter active" data-level="1.2.1" data-path="Benefit_of_defined_action_type_as_variable.html">
             
-                <a href="./">
+                <a href="Benefit_of_defined_action_type_as_variable.html">
             
                     
-                    Redux
+                    将 Action 定义为变量的好处
             
                 </a>
             
@@ -168,12 +129,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../React-Redux/">
+        <li class="chapter " data-level="1.2.2" data-path="How_to_build_a_simple_react-redux.html">
             
-                <a href="../React-Redux/">
+                <a href="How_to_build_a_simple_react-redux.html">
             
                     
-                    React-Redux
+                    怎么构建一个简易的 react-redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="The_optimization_of_react_application.html">
+            
+                <a href="The_optimization_of_react_application.html">
+            
+                    
+                    React 应用优化
             
                 </a>
             
@@ -186,9 +160,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../../Other/">
+        <li class="chapter " data-level="1.3" data-path="../Other/">
             
-                <a href="../../Other/">
+                <a href="../Other/">
             
                     
                     其他
@@ -229,7 +203,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Redux</a>
+        <a href=".." >将 Action 定义为变量的好处</a>
     </h1>
 </div>
 
@@ -244,10 +218,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="reactredux">React/Redux</h2>
-<h4 id="&#x4E00;&#x3001;redux-thunk-&#x6709;&#x4EC0;&#x4E48;&#x7528;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;">&#x4E00;&#x3001;redux-thunk &#x6709;&#x4EC0;&#x4E48;&#x7528;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;?</h4>
-<h4 id="&#x4E8C;&#x3001;redux-saga-&#x6709;&#x4EC0;&#x4E48;&#x7528;&#xFF0C;&#x548C;-redux-thunk-&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;">&#x4E8C;&#x3001;redux-saga &#x6709;&#x4EC0;&#x4E48;&#x7528;&#xFF0C;&#x548C; redux-thunk &#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;?</h4>
-<h4 id="&#x4E09;&#x3001;&#x5C06;-action-type-&#x5B9A;&#x4E49;&#x4E3A;&#x53D8;&#x91CF;&#x7684;&#x597D;&#x5904;">&#x4E09;&#x3001;&#x5C06; action type &#x5B9A;&#x4E49;&#x4E3A;&#x53D8;&#x91CF;&#x7684;&#x597D;&#x5904;</h4>
+                                <h3 id="&#x5C06;-action-&#x5B9A;&#x4E49;&#x4E3A;&#x53D8;&#x91CF;&#x7684;&#x597D;&#x5904;">&#x5C06; Action &#x5B9A;&#x4E49;&#x4E3A;&#x53D8;&#x91CF;&#x7684;&#x597D;&#x5904;</h3>
 <p>&#x4F8B;&#x5982;&#xFF1A;
 actions.js</p>
 <pre><code>const LOAD_USER_LIST = &quot;LOAD_USER_LIST&quot;;
@@ -290,12 +261,12 @@ function loadUserList () {
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: React">
+                <a href="README.md" class="navigation navigation-prev " aria-label="Previous page: React">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../React-Redux/" class="navigation navigation-next " aria-label="Next page: React-Redux">
+                <a href="How_to_build_a_simple_react-redux.html" class="navigation navigation-next " aria-label="Next page: 怎么构建一个简易的 react-redux">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -306,37 +277,37 @@ function loadUserList () {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Redux","level":"1.5.1","depth":2,"next":{"title":"React-Redux","level":"1.5.2","depth":2,"path":"React/React-Redux/README.md","ref":"./React/React-Redux/README.md","articles":[]},"previous":{"title":"React","level":"1.5","depth":1,"path":"React/README.md","ref":"./React/README.md","articles":[{"title":"Redux","level":"1.5.1","depth":2,"path":"React/Redux/README.md","ref":"./React/Redux/README.md","articles":[]},{"title":"React-Redux","level":"1.5.2","depth":2,"path":"React/React-Redux/README.md","ref":"./React/React-Redux/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"React/Redux/README.md","mtime":"2020-06-10T07:24:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-10T07:24:10.675Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"将 Action 定义为变量的好处","level":"1.2.1","depth":2,"next":{"title":"怎么构建一个简易的 react-redux","level":"1.2.2","depth":2,"path":"React/How_to_build_a_simple_react-redux.md","ref":"./React/How_to_build_a_simple_react-redux.md","articles":[]},"previous":{"title":"React","level":"1.2","depth":1,"path":"React/README.md","ref":"./React/README.md","articles":[{"title":"将 Action 定义为变量的好处","level":"1.2.1","depth":2,"path":"React/Benefit_of_defined_action_type_as_variable.md","ref":"./React/Benefit_of_defined_action_type_as_variable.md","articles":[]},{"title":"怎么构建一个简易的 react-redux","level":"1.2.2","depth":2,"path":"React/How_to_build_a_simple_react-redux.md","ref":"./React/How_to_build_a_simple_react-redux.md","articles":[]},{"title":"React 应用优化","level":"1.2.3","depth":2,"path":"React/The_optimization_of_react_application.md","ref":"./React/The_optimization_of_react_application.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"React/Benefit_of_defined_action_type_as_variable.md","mtime":"2020-06-27T14:42:47.639Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-27T14:42:55.426Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    <script src="../../gitbook/gitbook.js"></script>
-    <script src="../../gitbook/theme.js"></script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 
