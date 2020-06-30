@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>怎么构建一个简易的 react-redux · GitBook</title>
+        <title>如何搭建一个简易的 react-redux · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -134,7 +134,7 @@
                 <a href="How_to_build_a_simple_react-redux.html">
             
                     
-                    怎么构建一个简易的 react-redux
+                    如何搭建一个简易的 react-redux
             
                 </a>
             
@@ -203,7 +203,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >怎么构建一个简易的 react-redux</a>
+        <a href=".." >如何搭建一个简易的 react-redux</a>
     </h1>
 </div>
 
@@ -218,16 +218,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x600E;&#x4E48;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x7B80;&#x6613;&#x7684;-react-redux">&#x600E;&#x4E48;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x7B80;&#x6613;&#x7684; react-redux</h3>
-<p>&#x6CE8;&#x610F;&#xFF1A;&#x4E0B;&#x6587;&#x4E2D;&#x7684;<code>state</code>&#x5747;&#x662F;&#x6307;<code>redux</code>&#x91CC;&#x5B58;&#x50A8;&#x7684;&#x72B6;&#x6001;</p>
-<p>&#x5728;&#x5F00;&#x59CB;&#x52A8;&#x624B;&#x4E4B;&#x524D;&#xFF0C;&#x5148;&#x601D;&#x8003;&#x51E0;&#x4E2A;&#x95EE;&#x9898;</p>
-<ol>
-<li>&#x4EC0;&#x4E48;&#x662F; react-redux&#xFF1F;</li>
-<li>react-redux &#x662F;&#x600E;&#x4E48;&#x5DE5;&#x4F5C;&#x7684;&#xFF1F;</li>
-</ol>
-<h4 id="&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;-react-redux&#xFF1F;">&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F; react-redux&#xFF1F;</h4>
-<p>&#x901A;&#x8FC7;&#x540D;&#x5B57;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#xFF0C;<code>react-redux</code>&#x662F;&#x4F5C;&#x7528;&#x5728;<code>react</code>&#x548C;<code>redux</code>&#x4E4B;&#x95F4;&#xFF0C;&#x901A;&#x8FC7; <code>connect</code>&#x548C;<code>Provider</code>&#x8FD9;&#x4E24;&#x4E2A; api&#xFF0C;&#x5C06;&#x7EC4;&#x4EF6;&#x9700;&#x8981;&#x7684;&#x72B6;&#x6001;&#x6CE8;&#x5165;&#x8FDB;&#x53BB;&#xFF0C;&#x5F53; redux &#x91CC;&#x7684;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x89E6;&#x53D1;&#x76F8;&#x5E94;&#x7EC4;&#x4EF6;&#x7684;&#x66F4;&#x65B0;</p>
-<h4 id="&#x4E8C;&#x3001;react-redux-&#x662F;&#x600E;&#x4E48;&#x5DE5;&#x4F5C;&#x7684;&#xFF1F;">&#x4E8C;&#x3001;react-redux &#x662F;&#x600E;&#x4E48;&#x5DE5;&#x4F5C;&#x7684;&#xFF1F;</h4>
+                                <h3 id="&#x5982;&#x4F55;&#x642D;&#x5EFA;&#x4E00;&#x4E2A;&#x7B80;&#x6613;&#x7684;react-redux">&#x5982;&#x4F55;&#x642D;&#x5EFA;&#x4E00;&#x4E2A;&#x7B80;&#x6613;&#x7684;react-redux</h3>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;<a href="https://github.com/youniaogu/simple-react-redux" target="_blank">github</a></p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x4E0B;&#x6587;&#x4E2D;&#x7684;<code>state</code>&#x5747;&#x662F;&#x6307;redux&#x91CC;&#x5B58;&#x50A8;&#x7684;&#x72B6;&#x6001;</p>
+<h4 id="&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;react-redux&#xFF1F;">&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;react-redux&#xFF1F;</h4>
+<p><code>react-redux</code>&#x662F;redux&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x901A;&#x8FC7; <code>connect</code>&#x548C;<code>Provider</code>&#x8FD9;&#x4E24;&#x4E2A; api&#xFF0C;&#x5C06;&#x7EC4;&#x4EF6;&#x9700;&#x8981;&#x7684;&#x72B6;&#x6001;&#x6CE8;&#x5165;&#x8FDB;&#x53BB;&#xFF0C;&#x5F53;redux&#x91CC;&#x7684;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x89E6;&#x53D1;&#x76F8;&#x5E94;&#x7EC4;&#x4EF6;&#x7684;&#x66F4;&#x65B0;</p>
+<h4 id="&#x4E8C;&#x3001;react-redux&#x662F;&#x600E;&#x4E48;&#x5DE5;&#x4F5C;&#x7684;&#xFF1F;">&#x4E8C;&#x3001;react-redux&#x662F;&#x600E;&#x4E48;&#x5DE5;&#x4F5C;&#x7684;&#xFF1F;</h4>
 <p>&#x5148;&#x770B;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x7528;&#x4F8B;</p>
 <pre><code>import React from &quot;react&quot;;
 import ReactDOM from &quot;react-dom&quot;;
@@ -248,7 +244,7 @@ ReactDOM.render(
 );
 </code></pre><p>&#x6700;&#x5916;&#x5C42;<code>Provider</code>&#x5C06;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x5305;&#x88F9;&#x4F4F;</p>
 <p>&#x5C06;<code>createStore</code>&#x8FD4;&#x56DE;&#x7684;<code>store</code>&#x901A;&#x8FC7;<code>props</code>&#x4F20;&#x9012;&#x7ED9;<code>Provider</code></p>
-<p><strong>store &#x5E76;&#x4E0D;&#x662F; redux &#x5B58;&#x50A8;&#x7684;&#x72B6;&#x6001;</strong>&#xFF0C;&#x8981;&#x83B7;&#x5F97;&#x5B58;&#x50A8;&#x7684;&#x72B6;&#x6001;&#x5FC5;&#x987B;&#x901A;&#x8FC7; <code>store.getState()</code></p>
+<p><strong>store&#x5E76;&#x4E0D;&#x662F;redux&#x5B58;&#x50A8;&#x7684;&#x72B6;&#x6001;</strong>&#xFF0C;&#x8981;&#x83B7;&#x5F97;&#x5B58;&#x50A8;&#x7684;&#x72B6;&#x6001;&#x5FC5;&#x987B;&#x901A;&#x8FC7;<code>store.getState()</code></p>
 <pre><code>import React, { Component } from &quot;react&quot;;
 import { dispatchAdd, dispatchReduce } from &quot;./actions&quot;;
 import { connect } from &quot;react-redux&quot;;
@@ -273,7 +269,7 @@ const mapDispatchToProps = function (dispatch, ownProps) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);
-</code></pre><p>&#x5728;&#x9700;&#x8981; redux &#x7684;&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x7EC4;&#x4EF6;&#x901A;&#x8FC7; <code>connect</code> &#x5C06;&#x72B6;&#x6001;&#x4F20;&#x9012;&#x7ED9;&#x7EC4;&#x4EF6;</p>
+</code></pre><p>&#x5728;&#x9700;&#x8981;redux&#x7684;&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x7EC4;&#x4EF6;&#x901A;&#x8FC7;<code>connect</code>&#x5C06;&#x72B6;&#x6001;&#x4F20;&#x9012;&#x7ED9;&#x7EC4;&#x4EF6;</p>
 <p>connect &#x6709;&#x56DB;&#x4E2A;&#x4F20;&#x53C2;</p>
 <ol>
 <li><code>mapStateToProps?: Function</code> &#x5C06; state &#x6CE8;&#x5165;&#x5230;&#x7EC4;&#x4EF6;&#x4E2D;</li>
@@ -284,14 +280,14 @@ export default connect(mapStateToProps, mapDispatchToProps)(Counter);
 <p>&#x5927;&#x90E8;&#x5206;&#x60C5;&#x51B5;&#x4E0B;&#x6211;&#x4EEC;&#x53EA;&#x4F7F;&#x7528;&#x5230;&#x524D;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#xFF08;&#x672C;&#x6587;&#x4E5F;&#x53EA;&#x4F1A;&#x8BB2;&#x8FF0;&#x8FD9;&#x4E24;&#x90E8;&#x5206;&#xFF09;</p>
 <p>&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x7528;&#x4F8B;&#x53EF;&#x4EE5;&#x77E5;&#x9053;</p>
 <ul>
-<li><code>Provider</code> &#x8D1F;&#x8D23;&#x4F20;&#x9012;<code>store</code></li>
-<li><code>connect</code> &#x8D1F;&#x8D23;&#x63A5;&#x6536;<code>store</code>&#xFF0C;&#x5E76;&#x5C06;<code>state</code>&#x6CE8;&#x5165;&#x5230;&#x7EC4;&#x4EF6;&#x4E2D;</li>
+<li><code>Provider</code>&#x8D1F;&#x8D23;&#x4F20;&#x9012;<code>store</code></li>
+<li><code>connect</code>&#x8D1F;&#x8D23;&#x63A5;&#x6536;<code>store</code>&#xFF0C;&#x5E76;&#x5C06;<code>state</code>&#x6CE8;&#x5165;&#x5230;&#x7EC4;&#x4EF6;&#x4E2D;</li>
 </ul>
 <p><code>Provider</code>&#x662F;&#x901A;&#x8FC7;&#x4EC0;&#x4E48;&#x8FDB;&#x884C;<code>store</code>&#x4F20;&#x9012;&#xFF1F;
 &#x7B54;&#x6848;&#x662F;&#xFF1A;<a href="https://reactjs.org/docs/context.html" target="_blank">Context</a></p>
 <p>&#x4EC0;&#x4E48;&#x662F;<code>Context</code>&#xFF1F;</p>
-<p>&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;<code>Context</code>&#x662F; React &#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x4F20;&#x9012;&#x65B9;&#x5F0F;&#xFF0C;<code>Context</code>&#x80FD;&#x591F;&#x81EA;&#x52A8;&#x7684;&#x81EA;&#x4E0A;&#x800C;&#x4E0B;&#x4F20;&#x9012;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x50CF;<code>props</code>&#x90A3;&#x6837;&#x624B;&#x52A8;&#x5B9A;&#x4E49;&#x4F20;&#x9012;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;<strong>&#x65E2;&#x65B9;&#x4FBF;&#x53C8;&#x5371;&#x9669;</strong>&#x7684;&#x5C5E;&#x6027;&#x3002;&apos;</p>
-<p>&#x5982;&#x679C;&#x60F3;&#x8BE6;&#x7EC6;&#x4E86;&#x89E3;<code>Context</code>&#x7684;&#x8BE6;&#x7EC6;&#x7528;&#x6CD5;&#x548C;&#x8BF4;&#x660E;&#xFF0C;&#x53EF;&#x4EE5;&#x53BB; React &#x5B98;&#x7F51;&#x67E5;&#x770B;<a href="https://reactjs.org/docs/context.html" target="_blank">&#x6587;&#x6863;</a></p>
+<p>&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;<code>Context</code>&#x662F;React&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x4F20;&#x9012;&#x65B9;&#x5F0F;&#xFF0C;<code>Context</code>&#x80FD;&#x591F;&#x81EA;&#x52A8;&#x7684;&#x81EA;&#x4E0A;&#x800C;&#x4E0B;&#x4F20;&#x9012;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x50CF;<code>props</code>&#x90A3;&#x6837;&#x624B;&#x52A8;&#x5B9A;&#x4E49;&#x4F20;&#x9012;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;<strong>&#x65E2;&#x65B9;&#x4FBF;&#x53C8;&#x5371;&#x9669;</strong>&#x7684;&#x5C5E;&#x6027;&#x3002;&apos;</p>
+<p>&#x5982;&#x679C;&#x60F3;&#x8BE6;&#x7EC6;&#x4E86;&#x89E3;<code>Context</code>&#x7684;&#x8BE6;&#x7EC6;&#x7528;&#x6CD5;&#x548C;&#x8BF4;&#x660E;&#xFF0C;&#x53EF;&#x4EE5;&#x53BB;React&#x5B98;&#x7F51;&#x67E5;&#x770B;<a href="https://reactjs.org/docs/context.html" target="_blank">&#x6587;&#x6863;</a></p>
 <h4 id="&#x4E09;&#x3001;&#x5F00;&#x59CB;&#x52A8;&#x624B;">&#x4E09;&#x3001;&#x5F00;&#x59CB;&#x52A8;&#x624B;</h4>
 <p>&#x76EE;&#x6807;&#xFF1A;&#x5B9E;&#x73B0;<code>connect</code>&#x548C;<code>Provider</code></p>
 <p><code>connect</code>&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x63A5;&#x6536;<code>mapStateToProps</code>&#x548C;<code>mapDispatchToProps</code>&#xFF0C;&#x8FD4;&#x56DE;<a href="https://reactjs.org/docs/higher-order-components.html" target="_blank">hoc</a></p>
@@ -330,7 +326,7 @@ Provider.propTypes = {
   }),
 };
 </code></pre><p>&#x4E0A;&#x9762;&#x5C31;&#x662F;<code>connect</code>&#x548C;<code>Provider</code>&#x6700;&#x57FA;&#x7840;&#x7684;&#x5B9A;&#x4E49;</p>
-<p>&#x518D;&#x6765;&#x662F;<code>connect</code>&#x63A5;&#x6536;<code>Context</code>&#xFF0C;&#x5E76;&#x901A;&#x8FC7;&#x4F20;&#x5165;&#x7684;&#x4E24;&#x4E2A; map &#x65B9;&#x6CD5;&#x5C06;&#x9700;&#x8981;&#x7684;<code>state</code>&#x548C;<code>dispatch</code>&#x6CE8;&#x5165;&#x5230;&#x7EC4;&#x4EF6;&#x7684;<code>props</code>&#x4E2D;</p>
+<p>&#x518D;&#x6765;&#x662F;<code>connect</code>&#x63A5;&#x6536;<code>Context</code>&#xFF0C;&#x5E76;&#x901A;&#x8FC7;&#x4F20;&#x5165;&#x7684;&#x4E24;&#x4E2A;map&#x65B9;&#x6CD5;&#x5C06;&#x9700;&#x8981;&#x7684;<code>state</code>&#x548C;<code>dispatch</code>&#x6CE8;&#x5165;&#x5230;&#x7EC4;&#x4EF6;&#x7684;<code>props</code>&#x4E2D;</p>
 <pre><code>...
 
 export function connect(mapStateToProps, mapDispatchToProps) {
@@ -360,10 +356,7 @@ export function connect(mapStateToProps, mapDispatchToProps) {
 ...
 </code></pre><p>&#x5230;&#x8FD9;&#x4E00;&#x6B65;&#xFF0C;&#x5DF2;&#x7ECF;&#x5C06;<code>state</code>&#x548C;<code>dispatch</code>&#x6CE8;&#x5165;&#x5230;&#x7EC4;&#x4EF6;&#xFF0C;&#x4F46;&#x89E6;&#x53D1;<code>action</code>&#x540E;&#x5E76;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x7EC4;&#x4EF6;<code>render</code>&#xFF0C;&#x539F;&#x56E0;&#x5728;&#x4E8E;<code>state</code>&#x53D8;&#x5316;&#x540E;&#x5E76;&#x6CA1;&#x6709;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x7EC4;&#x4EF6;</p>
 <p>&#x6240;&#x4EE5;&#x8FD9;&#x4E00;&#x6B65;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x76D1;&#x542C;<code>state</code>&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x786E;&#x8BA4;&#x53D8;&#x5316;&#x540E;&#xFF0C;&#x89E6;&#x53D1;&#x7EC4;&#x4EF6;&#x7684;<code>render</code></p>
-<pre><code>import React, { Component } from &quot;react&quot;;
-import PropTypes from &quot;prop-types&quot;;
-
-const StoreContext = React.createContext();
+<pre><code>...
 
 export function connect(mapStateToProps, mapDispatchToProps) {
   return function wrapWithComponent (WrappedComponent) {
@@ -390,8 +383,8 @@ export function connect(mapStateToProps, mapDispatchToProps) {
       componentWillUnmount() {
         if (this.unSubscribe) {
           this.unSubscribe();
-          this.unSubscribe = null;
         }
+        this.clearCache();
       }
 
       handleStoreChange() {
@@ -405,6 +398,11 @@ export function connect(mapStateToProps, mapDispatchToProps) {
         if (prevStoreState !== storeState) {
           this.setState({ storeState });
         }
+      }
+
+      clearCache() {
+        this.store = null;
+        this.unSubscribe = null;
       }
 
       render() {
@@ -422,29 +420,50 @@ export function connect(mapStateToProps, mapDispatchToProps) {
   };
 }
 
-export class Provider extends Component {
-  render() {
-    return (
-      &lt;StoreContext.Provider value={this.props.store}&gt;
-        {this.props.children}
-      &lt;/StoreContext.Provider&gt;
+...
+</code></pre><p>&#x5728;&#x8BA2;&#x9605;&#x540E;&#xFF0C;&#x6BCF;&#x5F53;&#x89E6;&#x53D1;&#x4E00;&#x4E2A;<code>action</code>&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;<code>handleStoreChange</code>&#x65B9;&#x6CD5;&#xFF0C;&#x91CC;&#x9762;&#x5C06;<code>prevStoreState</code>&#x548C;<code>storeState</code>&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF0C;&#x53EA;&#x6709;&#x89E6;&#x53D1;&#x7684;<code>reducers</code>&#x8FD4;&#x56DE;&#x539F;&#x672C;&#x7684;<code>state</code>&#x65F6;&#x624D;&#x4F1A;&#x662F; true</p>
+<p>&#x6BCF;&#x5F53;<code>action</code>&#x89E6;&#x53D1;<code>state</code>&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x6BCF;&#x4E2A;<code>WrappedComponent</code>&#x90FD;&#x4F1A;<code>render</code>&#xFF0C;&#x5373;&#x4F7F;&#x6539;&#x53D8;&#x7684;<code>state</code>&#x7EC4;&#x4EF6;&#x6CA1;&#x6709;&#x7528;&#x5230;&#xFF0C;&#x6240;&#x4EE5;&#x63A5;&#x4E0B;&#x6765;&#x9700;&#x8981;&#x505A;&#x4E00;&#x4E9B;&#x4F18;&#x5316;</p>
+<pre><code>...
+
+  shouldComponentUpdate(prevProps, prevState) {
+    return !(
+      shallowEqual(this.state.storeState, prevState.storeState) ||
+      shallowEqual(
+        mapStateToProps(this.state.storeState, this.props),
+        mapStateToProps(prevState.storeState, prevProps)
+      )
     );
   }
-}
 
-Provider.propTypes = {
-  children: PropTypes.element.isRequired,
-  store: PropTypes.shape({
-    subscribe: PropTypes.func.isRequired,
-    dispatch: PropTypes.func.isRequired,
-    getState: PropTypes.func.isRequired,
-  }),
-};
-</code></pre><p>&#x5728;&#x8BA2;&#x9605;&#x540E;&#xFF0C;&#x6BCF;&#x5F53;&#x89E6;&#x53D1;&#x4E00;&#x4E2A;<code>action</code>&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;<code>handleStoreChange</code>&#x65B9;&#x6CD5;&#xFF0C;&#x91CC;&#x9762;&#x5C06;<code>prevStoreState</code>&#x548C;<code>storeState</code>&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF0C;&#x53EA;&#x6709;&#x89E6;&#x53D1;&#x7684;<code>reducers</code>&#x8FD4;&#x56DE;&#x539F;&#x672C;&#x7684;<code>state</code>&#x65F6;&#x624D;&#x4F1A;&#x662F; true</p>
-<h4 id="&#x95EE;&#x9898;">&#x95EE;&#x9898;</h4>
-<p>&#x6BCF;&#x5F53;<code>action</code>&#x89E6;&#x53D1;<code>state</code>&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x6BCF;&#x4E2A;<code>WrappedComponent</code>&#x90FD;&#x4F1A;<code>render</code>&#xFF0C;&#x5373;&#x4F7F;&#x6CA1;&#x6709;&#x7528;&#x5230;&#x6539;&#x53D8;&#x7684;<code>state</code>&#xFF0C;&#x6240;&#x4EE5;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5728;&#x6765;&#x8BF4;&#x8BF4; react-redux &#x505A;&#x7684;&#x6D45;&#x6BD4;&#x8F83;</p>
-<p><strong>&#x5F85;&#x7EED;......</strong></p>
-<p>&#x793A;&#x4F8B; demo&#xFF1A;<a href="https://github.com/youniaogu/simple-react-redux" target="_blank">github</a></p>
+...
+</code></pre><p>&#x5728;<code>shouldComponentUpdate</code>&#x4E2D;&#xFF0C;&#x6839;&#x636E;&#x524D;&#x540E;&#x7684;<code>storeState</code>&#x548C;<code>mapStateToProps</code>&#x7684;&#x7ED3;&#x679C;&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x9700;&#x8981;<code>render</code></p>
+<p><img src="../static/1.png" alt="pic1"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x70B9;&#x51FB;add&#x6309;&#x94AE;&#x540E;&#xFF0C;&#x53EA;&#x89E6;&#x53D1;&#x4E86;<code>counter</code>&#x7684;<code>render</code>&#xFF0C;&#x8FBE;&#x5230;&#x4E86;&#x9884;&#x671F;&#x7684;&#x6548;&#x679C;&#xFF08;&#x8FD9;&#x91CC;<code>render</code>&#x4E24;&#x6B21;&#x662F;&#x56E0;&#x4E3A;<code>React.StrictMode</code>&#xFF0C;&#x8BE6;&#x7EC6;&#x53EF;&#x4EE5;&#x770B;<a href="https://github.com/facebook/react/issues/15074" target="_blank">issues</a>&#xFF09;</p>
+<p>&#x5230;&#x8FD9;&#x6B65;&#x7B80;&#x6613;<code>react-redux</code>&#x7B97;&#x662F;&#x5B8C;&#x6210;&#x4E86;</p>
+<h4 id="&#x601D;&#x8003;">&#x601D;&#x8003;</h4>
+<p>&#x6700;&#x540E;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x5B58;&#x5728;&#x7684;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#xFF1A;</p>
+<ul>
+<li><p><code>mapDispatchToProps</code>&#x53EA;&#x80FD;&#x4F20;&#x9012;<code>function</code>&#x7C7B;&#x578B;</p>
+<ul>
+<li>&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#x5927;&#x591A;&#x6570;&#x90FD;&#x4F1A;&#x4F20;&#x9012;<code>action creater</code>&#x800C;&#x4E0D;&#x662F;<code>action</code>&#xFF0C;&#x6240;&#x4EE5;&#x652F;&#x6301;<code>object</code>&#x7C7B;&#x578B;&#x662F;&#x633A;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x70B9;</li>
+</ul>
+</li>
+<li><p>&#x66F4;&#x65B0;&#x903B;&#x8F91;&#x4E0D;&#x5E94;&#x8BE5;&#x5728;<code>shouldComponentUpdate</code>&#x91CC;</p>
+<ul>
+<li><p>&#x8FD9;&#x4E00;&#x70B9;&#x5728;<a href="https://youtu.be/VJ38wSFbM3A" target="_blank">React Redux with Dan Abramov</a>&#x89C6;&#x9891;&#x91CC;&#x6709;&#x63D0;&#x5230;&#xFF0C;&#x6700;&#x521D;&#x8BBE;&#x8BA1;&#x65F6;&#x66F4;&#x65B0;&#x903B;&#x8F91;&#x5199;&#x5728;<code>shouldComponentUpdate</code>&#x91CC;&#xFF0C;&#x4F46;&#x5728;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#x4E0B;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x6700;&#x540E;&#x6E32;&#x67D3;&#x51FA;&#x6765;&#x4E0D;&#x662F;&#x6700;&#x65B0;&#x7684;<code>state</code>&#xFF08;&#x56E0;&#x4E3A;&#x672C;&#x4EBA;&#x82F1;&#x8BED;&#x4E0D;&#x597D;&#xFF0C;&#x6CA1;&#x80FD;&#x7406;&#x89E3;&#x9519;&#x8BEF;&#x53D1;&#x751F;&#x7684;&#x60C5;&#x666F;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x4E0D;&#x5199;&#x51FA;&#x6765;&#x6015;&#x8BEF;&#x5BFC;&#x5927;&#x5BB6;&#xFF0C;&#x89C6;&#x9891;&#x5185;24:59~27:30&#xFF09;</p>
+</li>
+<li><p>&#x95EE;&#x9898;&#x7684;&#x6839;&#x672C;&#x539F;&#x56E0;&#x5728;&#x4E8E;react&#x662F;&#x5F02;&#x6B65;&#x6E32;&#x67D3;&#xFF0C;&#x5BF9;&#x4E8E;&#x591A;&#x4E2A;<code>setState</code>&#x4F1A;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x53BB;&#x6267;&#x884C;&#xFF0C;&#x800C;redux&#x4FEE;&#x6539;<code>state</code>&#x5374;&#x662F;&#x540C;&#x6B65;&#xFF0C;&#x5F53;<code>dipatch</code>&#x65F6;&#xFF0C;redux&#x91CC;&#x7684;<code>state</code>&#x4F1A;&#x7ACB;&#x5373;&#x6539;&#x53D8;&#xFF0C;&#x5F02;&#x6B65;&#x4E0E;&#x540C;&#x6B65;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;&#x5BFC;&#x81F4;&#x4E86;&#x95EE;&#x9898;</p>
+</li>
+<li><p>&#x8BB2;&#x8FF0;&#x95EE;&#x9898;&#x7684;&#x540C;&#x65F6;&#x4E5F;&#x4ECB;&#x7ECD;&#x4E86;&#x65B0;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x5C06;&#x66F4;&#x65B0;&#x903B;&#x8F91;&#x653E;&#x5728;<code>render</code>&#x91CC;&#xFF0C;<code>connect</code>&#x4F1A;&#x4FDD;&#x7559;<code>React.createElement</code>&#x751F;&#x6210;&#x7684;<code>element</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x4E00;&#x7CFB;&#x5217;&#x5224;&#x65AD;&#x540E;&#x8FD4;&#x56DE;&#x65B0;&#x65E7;<code>element</code>&#x5BF9;&#x8C61;&#xFF08;&#x5982;&#x679C;render&#x91CC;&#x8FD4;&#x56DE;&#x65E7;&#x7684;element&#x5BF9;&#x8C61;&#xFF0C;&#x5C06;&#x4E0D;&#x4F1A;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF09;</p>
+</li>
+</ul>
+</li>
+<li><p>&#x66F4;&#x65B0;&#x903B;&#x8F91;&#x91CC;&#x6BCF;&#x4E2A;<code>mapStateToProps</code>&#x90FD;&#x5FC5;&#x987B;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x4E00;&#x904D;</p>
+<ul>
+<li>&#x5F53;mapStateToProps&#x7684;&#x8BA1;&#x7B97;&#x5F88;&#x91CD;&#x65F6;&#xFF0C;&#x6BCF;&#x6B21;&#x6E32;&#x67D3;&#x90FD;&#x8981;&#x8BDD;&#x8D39;&#x5927;&#x91CF;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x662F;react-redux&#x672C;&#x8EAB;&#x7684;&#x7F3A;&#x9677;&#xFF08;<a href="https://github.com/reduxjs/reselect" target="_blank">reselect</a>&#x89E3;&#x51B3;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF09;</li>
+</ul>
+</li>
+</ul>
 <h4 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h4>
 <p><a href="https://youtu.be/VJ38wSFbM3A" target="_blank">React Redux with Dan Abramov</a></p>
 <p><a href="%22https:/blog.isquaredsoftware.com/2018/11/react-redux-history-implementation/%22">The History and Implementation of React-Redux</a></p>
@@ -491,7 +510,7 @@ Provider.propTypes = {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"怎么构建一个简易的 react-redux","level":"1.2.2","depth":2,"next":{"title":"React 应用优化","level":"1.2.3","depth":2,"path":"React/The_optimization_of_react_application.md","ref":"./React/The_optimization_of_react_application.md","articles":[]},"previous":{"title":"将 Action 定义为变量的好处","level":"1.2.1","depth":2,"path":"React/Benefit_of_defined_action_type_as_variable.md","ref":"./React/Benefit_of_defined_action_type_as_variable.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"React/How_to_build_a_simple_react-redux.md","mtime":"2020-06-27T14:42:47.640Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-27T14:42:55.426Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"如何搭建一个简易的 react-redux","level":"1.2.2","depth":2,"next":{"title":"React 应用优化","level":"1.2.3","depth":2,"path":"React/The_optimization_of_react_application.md","ref":"./React/The_optimization_of_react_application.md","articles":[]},"previous":{"title":"将 Action 定义为变量的好处","level":"1.2.1","depth":2,"path":"React/Benefit_of_defined_action_type_as_variable.md","ref":"./React/Benefit_of_defined_action_type_as_variable.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"React/How_to_build_a_simple_react-redux.md","mtime":"2020-06-30T04:02:58.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-30T04:04:03.831Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
