@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>什么是Reselect? · GitBook</title>
+        <title>什么是 Reselect? · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -17,7 +17,11 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-atom-dark.css">
                 
             
                 
@@ -60,7 +64,7 @@
     <link rel="next" href="the_optimization_of_react_application.html" />
     
     
-    <link rel="prev" href="how_to_build_a_simple_react-redux.html" />
+    <link rel="prev" href="how_to_implement_react-redux.html" />
     
 
     </head>
@@ -116,12 +120,25 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="the_benefit_and_harmful_of_definition_action_as_variable.html">
+        <li class="chapter " data-level="1.2.1" data-path="how_to_implement_redux.html">
+            
+                <a href="how_to_implement_redux.html">
+            
+                    
+                    如何实现 Redux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="the_benefit_and_harmful_of_definition_action_as_variable.html">
             
                 <a href="the_benefit_and_harmful_of_definition_action_as_variable.html">
             
                     
-                    Action定义为变量的好处和坏处
+                    Action 定义为变量的好处和坏处
             
                 </a>
             
@@ -129,12 +146,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="how_to_build_a_simple_react-redux.html">
+        <li class="chapter " data-level="1.2.3" data-path="how_to_implement_react-redux.html">
             
-                <a href="how_to_build_a_simple_react-redux.html">
+                <a href="how_to_implement_react-redux.html">
             
                     
-                    如何搭建一个简易的React-redux
+                    如何实现 React-redux
             
                 </a>
             
@@ -142,12 +159,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.3" data-path="what_is_reselect.html">
+        <li class="chapter active" data-level="1.2.4" data-path="what_is_reselect.html">
             
                 <a href="what_is_reselect.html">
             
                     
-                    什么是Reselect?
+                    什么是 Reselect?
             
                 </a>
             
@@ -155,12 +172,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="the_optimization_of_react_application.html">
+        <li class="chapter " data-level="1.2.5" data-path="the_optimization_of_react_application.html">
             
                 <a href="the_optimization_of_react_application.html">
             
                     
-                    React应用优化
+                    React 应用优化
             
                 </a>
             
@@ -216,7 +233,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >什么是Reselect?</a>
+        <a href=".." >什么是 Reselect?</a>
     </h1>
 </div>
 
@@ -231,33 +248,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x4EC0;&#x4E48;&#x662F;reselect&#xFF1F;">&#x4EC0;&#x4E48;&#x662F;Reselect&#xFF1F;</h3>
+                                <h3 id="&#x4EC0;&#x4E48;&#x662F;-reselect">&#x4EC0;&#x4E48;&#x662F; Reselect</h3>
 <blockquote>
-<p>react-redux&#x6027;&#x80FD;&#x4F18;&#x5316;&#x5E93;</p>
+<p>react-redux &#x6027;&#x80FD;&#x4F18;&#x5316;&#x5E93;</p>
 </blockquote>
-<h4 id="reselect&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#xFF1F;">Reselect&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#xFF1F;</h4>
+<h4 id="reselect-&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#xFF1F;">Reselect &#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#xFF1F;</h4>
 <blockquote>
-<p>&#x524D;&#x63D0;&#xFF1A;&#x5728;react-redux&#x91CC;&#xFF0C;&#x6BCF;&#x5F53;state&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x4E3A;&#x4E86;&#x6BD4;&#x8F83;&#x524D;&#x540E;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x90FD;&#x4F1A;&#x8C03;&#x7528;mapStateToProps&#x83B7;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x7ED3;&#x679C;</p>
+<p>&#x524D;&#x63D0;&#xFF1A;&#x5728; react-redux &#x91CC;&#xFF0C;&#x6BCF;&#x5F53; state &#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x4E3A;&#x4E86;&#x6BD4;&#x8F83;&#x524D;&#x540E;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x90FD;&#x4F1A;&#x8C03;&#x7528; mapStateToProps &#x83B7;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x7ED3;&#x679C;</p>
 </blockquote>
 <p>&#x5F53;<code>mapStateToProps</code>&#x7684;&#x903B;&#x8F91;&#x6BD4;&#x8F83;&#x91CD;&#x65F6;&#xFF0C;&#x5C06;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x5927;&#x7684;&#x5F00;&#x9500;&#xFF0C;<code>reselect</code>&#x7684;&#x76EE;&#x7684;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E9B;&#x65E0;&#x7528;&#x7684;&#x5F00;&#x9500;&#x3002;</p>
-<h4 id="reselect&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#xFF1F;">Reselect&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#xFF1F;</h4>
+<h4 id="reselect-&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#xFF1F;">Reselect &#x505A;&#x4E86;&#x4EC0;&#x4E48;&#xFF1F;</h4>
 <p>&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B;<code>reselect</code>&#x7684;&#x7528;&#x6CD5;&#xFF1A;</p>
-<pre><code>import { createSelector } from &apos;reselect&apos;;
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> createSelector <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;reselect&apos;</span><span class="token punctuation">;</span>
 
-//createSelector(...inputSelectors | [inputSelectors], resultFunc)
-@connect(createSelector(
-  (state, ownProps) =&gt; state.counter,
-  (counter) =&gt; {
-    return {
-      counter,
-    };
-  },
-), {
-  dispatchAdd,
-  dispatchReduce,
-});
-</code></pre><p><code>createSelector</code>&#x9700;&#x8981;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;<code>inputSelectors</code>&#x548C;<code>resultFunc</code></p>
-<p><code>inputSelectors</code>&#x53EF;&#x4EE5;&#x4E3A;&#x6570;&#x7EC4;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x591A;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x91CC;&#x9762;&#x8FD4;&#x56DE;&#x9700;&#x8981;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x8FD9;&#x4E9B;&#x5B57;&#x6BB5;&#x4F1A;&#x4F5C;&#x4E3A;<code>resultFunc</code>&#x65B9;&#x6CD5;&#x7684;&#x4F20;&#x53C2;&#xFF0C;resultFunc&#x5219;&#x662F;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x6700;&#x540E;&#x7684;<code>props</code>&#xFF08;&#x529F;&#x80FD;&#x5BF9;&#x5E94;&#x4E4B;&#x524D;&#x7684;<code>mapStateToProps</code>&#xFF09;</p>
+<span class="token comment">//createSelector(...inputSelectors | [inputSelectors], resultFunc)</span>
+@<span class="token function">connect</span><span class="token punctuation">(</span><span class="token function">createSelector</span><span class="token punctuation">(</span>
+  <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> ownProps</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>counter<span class="token punctuation">,</span>
+  <span class="token punctuation">(</span><span class="token parameter">counter</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      counter<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  dispatchAdd<span class="token punctuation">,</span>
+  dispatchReduce<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><code>createSelector</code>&#x9700;&#x8981;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;<code>inputSelectors</code>&#x548C;<code>resultFunc</code></p>
+<p><code>inputSelectors</code>&#x53EF;&#x4EE5;&#x4E3A;&#x6570;&#x7EC4;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x591A;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x91CC;&#x9762;&#x8FD4;&#x56DE;&#x9700;&#x8981;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x8FD9;&#x4E9B;&#x5B57;&#x6BB5;&#x4F1A;&#x4F5C;&#x4E3A;<code>resultFunc</code>&#x65B9;&#x6CD5;&#x7684;&#x4F20;&#x53C2;&#xFF0C;resultFunc &#x5219;&#x662F;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x6700;&#x540E;&#x7684;<code>props</code>&#xFF08;&#x529F;&#x80FD;&#x5BF9;&#x5E94;&#x4E4B;&#x524D;&#x7684;<code>mapStateToProps</code>&#xFF09;</p>
 <p><code>reselect</code>&#x4F1A;&#x4FDD;&#x5B58;<code>mapStateToProps</code>&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x5F53;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x7684;&#x53C2;&#x6570;&#x672A;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x65F6;&#xFF08;&#x6D45;&#x6BD4;&#x8F83;&#xFF09;&#xFF0C;<code>resultFunc</code>&#x4F1A;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x65E7;&#x7684;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#xFF0C;&#x4ECE;&#x800C;&#x907F;&#x514D;&#x4E86;&#x65E0;&#x7528;&#x7684;&#x8BA1;&#x7B97;&#x5F00;&#x9500;</p>
 
                                 
@@ -286,12 +304,12 @@
 
             
                 
-                <a href="how_to_build_a_simple_react-redux.html" class="navigation navigation-prev " aria-label="Previous page: 如何搭建一个简易的React-redux">
+                <a href="how_to_implement_react-redux.html" class="navigation navigation-prev " aria-label="Previous page: 如何实现 React-redux">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="the_optimization_of_react_application.html" class="navigation navigation-next " aria-label="Next page: React应用优化">
+                <a href="the_optimization_of_react_application.html" class="navigation navigation-next " aria-label="Next page: React 应用优化">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -302,7 +320,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"什么是Reselect?","level":"1.2.3","depth":2,"next":{"title":"React应用优化","level":"1.2.4","depth":2,"path":"React/the_optimization_of_react_application.md","ref":"./React/the_optimization_of_react_application.md","articles":[]},"previous":{"title":"如何搭建一个简易的React-redux","level":"1.2.2","depth":2,"path":"React/how_to_build_a_simple_react-redux.md","ref":"./React/how_to_build_a_simple_react-redux.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"React/what_is_reselect.md","mtime":"2020-06-30T17:35:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-30T17:38:37.976Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"什么是 Reselect?","level":"1.2.4","depth":2,"next":{"title":"React 应用优化","level":"1.2.5","depth":2,"path":"React/the_optimization_of_react_application.md","ref":"./React/the_optimization_of_react_application.md","articles":[]},"previous":{"title":"如何实现 React-redux","level":"1.2.3","depth":2,"path":"React/how_to_implement_react-redux.md","ref":"./React/how_to_implement_react-redux.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","github","-highlight","prism","prism-themes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/youniaogu"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"prism-themes":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"React/what_is_reselect.md","mtime":"2020-07-20T08:07:03.375Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-04T10:22:38.215Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -310,6 +328,14 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
