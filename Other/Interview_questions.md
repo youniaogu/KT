@@ -59,3 +59,32 @@ var b = 10;
 - 非匿名自执行函数，函数名只读(类似常量)
 - 非严格模式下给常量命名静默失败
 - 严格模式下给常量命名报错 TypeError
+
+##### 4. 二分查找
+
+注意：二分查找是特定在有序数组里才能使用的查找算法
+
+```javascript
+const a = [1, 3, 6, 7, 8, 11, 30, 60, 63, 90];
+
+function binaySearch(array, data) {
+  const max = array.length - 1; // 9
+  const mid = Math.floor(max / 2); // 4
+
+  if (max < 0) {
+    return -1;
+  }
+
+  if (array[mid] === data) {
+    return data;
+  }
+
+  if (array[mid] > data) {
+    return binaySearch(array.slice(0, mid), data);
+  } else {
+    return binaySearch(array.slice(mid + 1, max + 1), data);
+  }
+}
+
+a.forEach(data => console.log(binaySearch(a, data)));
+```
