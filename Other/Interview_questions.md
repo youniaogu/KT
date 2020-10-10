@@ -1,6 +1,6 @@
 ### 面试题
 
-##### 1. 实现关键字
+##### 1. 实现 New 关键字
 
 ```javascript
 function New(fn, ...args) {
