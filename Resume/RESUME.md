@@ -42,7 +42,7 @@
 <p class="box_flex margin_bottom8">
   <img class="icon" src="./github.png" style="vertical-align: bottom;" />
   <span>
-    博客： <a href="https://youniaogu.github.io/KT/" target="_blank">https://youniaogu.github.io/KT/　</a>
+    博客： <a href="https://youniaogu.github.io/KT/" target="_blank">https://youniaogu.github.io/blog/　</a>
   </span>
   <img class="icon" src="./university.png" />
   <span>大学：华南农业大学 软件工程（2014.09-2018.06）</span>
