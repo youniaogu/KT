@@ -4,7 +4,7 @@
 
 > 为了方便，下面所有的 globalHistory 都特指 window.history
 
-##### 先简单介绍下 globalHistory 下的 api
+#### 先简单介绍下 globalHistory 下的 api
 
 - [pushState](https://developer.mozilla.org/zh-CN/docs/Web/API/History/pushState)：往历史栈里添加一个状态，
 - [replaceState](https://developer.mozilla.org/zh-CN/docs/Web/API/History/replaceState)：替换历史栈最新的状态

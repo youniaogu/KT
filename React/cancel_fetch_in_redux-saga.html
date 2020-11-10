@@ -432,9 +432,9 @@
                                 <h3 id="redux-saga-&#x4E2D;&#x53D6;&#x6D88;-fetch-&#x8BF7;&#x6C42;">redux-saga &#x4E2D;&#x53D6;&#x6D88; fetch &#x8BF7;&#x6C42;</h3>
 <p>&#x5728;&#x9605;&#x8BFB;&#x672C;&#x7BC7;&#x6587;&#x7AE0;&#x524D;&#xFF0C;&#x5EFA;&#x8BAE;&#x5148;&#x9605;&#x8BFB;<a href="https://redux-saga.js.org/" target="_blank">redux-saga &#x6587;&#x6863;</a>&#xFF0C;&#x7406;&#x89E3;&#x57FA;&#x7840;&#x7528;&#x6CD5;</p>
 <p>redux-saga &#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>cancel</code>&#x53D6;&#x6D88;&#x4EFB;&#x52A1;&#xFF0C;&#x4F46;&#x5E76;&#x4E0D;&#x80FD;&#x53D6;&#x6D88;&#x5DF2;&#x7ECF;&#x53D1;&#x8D77;&#x7684;&#x8BF7;&#x6C42;&#x3002;&#x800C;<code>xhr</code>&#x3001;<code>fetch</code>&#x90FD;&#x63D0;&#x4F9B;&#x4E86;&#x53D6;&#x6D88;&#x8BF7;&#x6C42;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C01;&#x88C5;<code>fetch</code>&#xFF0C;&#x5728;&#x53D6;&#x6D88;&#x4EFB;&#x52A1;&#x7684;&#x540C;&#x65F6;&#x53D6;&#x6D88;&#x8BF7;&#x6C42;&#x3002;</p>
-<h4 id="&#x5173;&#x4E8E;-fetch-&#x8BF7;&#x6C42;&#x7684;&#x53D6;&#x6D88;">&#x5173;&#x4E8E; fetch &#x8BF7;&#x6C42;&#x7684;&#x53D6;&#x6D88;</h4>
+<h4 id="1-&#x5173;&#x4E8E;-fetch-&#x8BF7;&#x6C42;&#x7684;&#x53D6;&#x6D88;">1. &#x5173;&#x4E8E; fetch &#x8BF7;&#x6C42;&#x7684;&#x53D6;&#x6D88;</h4>
 <p>&#x53C2;&#x8003;<a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController/AbortController" target="_blank">AbortController</a></p>
-<h4 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h4>
+<h4 id="2-&#x539F;&#x7406;">2. &#x539F;&#x7406;</h4>
 <p>yield &#x5173;&#x952E;&#x5B57;&#x5728;&#x88AB;&#x53D6;&#x6D88;&#x65F6;&#x5019;&#x4F1A;&#x629B;&#x51FA;&#x9519;&#x8BEF;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x9700;&#x8981;&#x7528;<code>generator</code>&#x51FD;&#x6570;&#x5305;&#x4F4F;<code>fetch</code>&#x8BF7;&#x6C42;&#xFF0C;&#x5728;&#x91CC;&#x9762;&#x901A;&#x8FC7;<code>try catch</code>&#x83B7;&#x53D6;&#x9519;&#x8BEF;&#xFF0C;&#x6700;&#x540E;&#x53D6;&#x6D88;&#x8BF7;&#x6C42;</p>
 <p>&#x5C01;&#x88C5;<code>fetch</code>&#xFF1A;</p>
 <pre class="language-"><code class="lang-javascript"><span class="token comment">//fetch.js</span>
@@ -444,14 +444,14 @@
   <span class="token keyword">try</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token keyword">yield</span> <span class="token function">fetchDataWithoutCancel</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
       <span class="token operator">...</span>options<span class="token punctuation">,</span>
-      signal<span class="token operator">:</span> controller<span class="token punctuation">.</span>signal
+      signal<span class="token operator">:</span> controller<span class="token punctuation">.</span>signal<span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
     controller<span class="token punctuation">.</span><span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="&#x5B9E;&#x9645;&#x8FD0;&#x7528;">&#x5B9E;&#x9645;&#x8FD0;&#x7528;</h4>
+<h4 id="3-&#x5B9E;&#x9645;&#x8FD0;&#x7528;">3. &#x5B9E;&#x9645;&#x8FD0;&#x7528;</h4>
 <h5 id="&#x4E0E;takelatest&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#xFF1A;">&#x4E0E;<code>takeLatest</code>&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#xFF1A;</h5>
 <pre class="language-"><code class="lang-javascript"><span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">cancelFetchSaga</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">yield</span> <span class="token function">takeLatest</span><span class="token punctuation">(</span><span class="token string">&apos;CANCEL_FETCH&apos;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -466,12 +466,12 @@
 <p>&#x6BCF;&#x5F53;&#x6267;&#x884C;<code>cancelFetch</code>&#x4EFB;&#x52A1;&#xFF0C;&#x4E0A;&#x4E00;&#x4E2A;&#x672A;&#x5B8C;&#x6210;&#x4EFB;&#x52A1;&#x5C31;&#x4F1A;&#x88AB;&#x53D6;&#x6D88;&#xFF0C;&#x540C;&#x65F6;&#x8BF7;&#x6C42;&#x4E5F;&#x4F1A;&#x88AB;&#x53D6;&#x6D88;</p>
 <h5 id="&#x4F7F;&#x7528;race&#x548C;delay&#x5B9E;&#x73B0;&#x8D85;&#x65F6;&#x53D6;&#x6D88;&#x8BF7;&#x6C42;&#xFF1A;">&#x4F7F;&#x7528;<code>race</code>&#x548C;<code>delay</code>&#x5B9E;&#x73B0;&#x8D85;&#x65F6;&#x53D6;&#x6D88;&#x8BF7;&#x6C42;&#xFF1A;</h5>
 <pre class="language-"><code class="lang-javascript"><span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">cancelFetchSaga</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">yield</span> <span class="token function">takeLatest</span><span class="token punctuation">(</span><span class="token string">&quot;CANCEL_FETCH&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">yield</span> <span class="token function">takeLatest</span><span class="token punctuation">(</span><span class="token string">&quot;CANCEL_FETCH&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token operator">*</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> <span class="token punctuation">{</span> data<span class="token punctuation">,</span> timeout <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">yield</span> <span class="token function">race</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
       data<span class="token operator">:</span> <span class="token function">call</span><span class="token punctuation">(</span>fetchData<span class="token punctuation">,</span> <span class="token punctuation">{</span>
-        url<span class="token operator">:</span> <span class="token string">&quot;http://httpstat.us/200?sleep=2000&quot;</span>
+        url<span class="token operator">:</span> <span class="token string">&quot;http://httpstat.us/200?sleep=2000&quot;</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-      timeout<span class="token operator">:</span> <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span>
+      timeout<span class="token operator">:</span> <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token keyword">if</span> <span class="token punctuation">(</span>timeout<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -483,7 +483,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <p>1s &#x540E;&#x8BF7;&#x6C42;&#x4F1A;&#x88AB;&#x53D6;&#x6D88;</p>
-<h4 id="&#x6D4B;&#x8BD5;&#x7528;&#x5DE5;&#x5177;">&#x6D4B;&#x8BD5;&#x7528;&#x5DE5;&#x5177;</h4>
+<h4 id="4-&#x6D4B;&#x8BD5;&#x7528;&#x5DE5;&#x5177;">4. &#x6D4B;&#x8BD5;&#x7528;&#x5DE5;&#x5177;</h4>
 <ol>
 <li><p><a href="http://httpstat.us/" target="_blank">httpstat</a>&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x8FD4;&#x56DE;&#x5EF6;&#x8FDF;</p>
 </li>
@@ -534,7 +534,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"redux-saga 中取消 fetch 请求","level":"1.2.5","depth":2,"next":{"title":"如何使用 typescript","level":"1.2.6","depth":2,"path":"React/how_to_use_typescript.md","ref":"./React/how_to_use_typescript.md","articles":[]},"previous":{"title":"什么是 reselect","level":"1.2.4","depth":2,"path":"React/what_is_reselect.md","ref":"./React/what_is_reselect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","github","-highlight","prism","prism-themes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/youniaogu"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"prism-themes":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"React/cancel_fetch_in_redux-saga.md","mtime":"2020-09-22T02:27:30.520Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-10T09:44:47.967Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"redux-saga 中取消 fetch 请求","level":"1.2.5","depth":2,"next":{"title":"如何使用 typescript","level":"1.2.6","depth":2,"path":"React/how_to_use_typescript.md","ref":"./React/how_to_use_typescript.md","articles":[]},"previous":{"title":"什么是 reselect","level":"1.2.4","depth":2,"path":"React/what_is_reselect.md","ref":"./React/what_is_reselect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","github","-highlight","prism","prism-themes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/youniaogu"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"prism-themes":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"React/cancel_fetch_in_redux-saga.md","mtime":"2020-11-10T09:51:56.956Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-10T09:54:28.785Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
