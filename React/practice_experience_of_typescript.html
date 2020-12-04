@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>如何使用 typescript · GitBook</title>
+        <title>typescript 实践心得 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -185,12 +185,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.6" data-path="how_to_use_typescript.html">
+        <li class="chapter active" data-level="1.2.6" data-path="practice_experience_of_typescript.html">
             
-                <a href="how_to_use_typescript.html">
+                <a href="practice_experience_of_typescript.html">
             
                     
-                    如何使用 typescript
+                    typescript 实践心得
             
                 </a>
             
@@ -427,7 +427,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >如何使用 typescript</a>
+        <a href=".." >typescript 实践心得</a>
     </h1>
 </div>
 
@@ -442,7 +442,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;-typescript&#xFF1F;">&#x5982;&#x4F55;&#x4F7F;&#x7528; typescript&#xFF1F;</h3>
+                                <h3 id="typescript-&#x5B9E;&#x8DF5;&#x5FC3;&#x5F97;">typescript &#x5B9E;&#x8DF5;&#x5FC3;&#x5F97;</h3>
 <p>&#x5148;&#x8BF4;&#x4E0B;&#x603B;&#x7ED3;&#xFF1A;</p>
 <blockquote>
 <ol>
@@ -578,12 +578,8 @@
 <p><strong>&#x5199;&#x6CD5;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x4E0E;&#x6700;&#x521D;&#x7684;&#x903B;&#x8F91;&#x6709;&#x51FA;&#x5165;</strong>&#xFF0C;&#x6BD4;&#x5982;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x4F20;&#x5165;&#x6574;&#x4E2A; state</p>
 <h4 id="6-&#x5168;&#x5C40;&#x53D8;&#x91CF;">6. &#x5168;&#x5C40;&#x53D8;&#x91CF;</h4>
 <p><code>ActionTypes</code>&#x548C;<code>RootTypes</code>&#x90FD;&#x662F;&#x552F;&#x4E00;&#x7684;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5728;&#x5168;&#x5C40;&#x5B9A;&#x4E49;&#x8FD9;&#x4E24;&#x4E2A;&#x7C7B;&#x578B;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x5BFC;&#x5165;&#x4EE3;&#x7801;&#x82B1;&#x8D39;&#x7684;&#x65F6;&#x95F4;</p>
-<ol>
-<li><p>&#x786E;&#x8BA4;<code>tsconfig.json</code>&#x91CC;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x628A;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x7684;<code>.d.ts</code>&#x6587;&#x4EF6;&#x653E;&#x5728;&#x7F16;&#x8BD1;&#x7684;&#x8303;&#x56F4;&#x5185;&#x5373;&#x53EF;</p>
-</li>
-<li><p>&#x5199;&#x5165;&#x5168;&#x5C40;&#x7C7B;&#x578B;</p>
-</li>
-</ol>
+<p>step 1. &#x786E;&#x8BA4;<code>tsconfig.json</code>&#x91CC;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x628A;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#x7684;<code>.d.ts</code>&#x6587;&#x4EF6;&#x653E;&#x5728;&#x7F16;&#x8BD1;&#x7684;&#x8303;&#x56F4;&#x5185;&#x5373;&#x53EF;</p>
+<p>step 2. &#x5199;&#x5165;&#x5168;&#x5C40;&#x7C7B;&#x578B;</p>
 <pre class="language-"><code class="lang-javascript"><span class="token comment">//actions.js</span>
 <span class="token operator">...</span>
 <span class="token keyword">export</span> type ActionTypes <span class="token operator">=</span>
@@ -601,13 +597,9 @@
 declare type RootTypes <span class="token operator">=</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;reducers&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>RootTypes<span class="token punctuation">;</span>
 declare type ActionTypes <span class="token operator">=</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;actions&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ActionTypes<span class="token punctuation">;</span>
 </code></pre>
-<ol>
-<li><p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x70B9;</p>
-</li>
-<li><p>&#x7B2C;&#x4E00;&#xFF0C;import &#x5BFC;&#x5165;&#x662F;&#x5728; typescript2.9 &#x52A0;&#x5165;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x80FD;&#x5BFC;&#x5165;&#x7C7B;&#x578B;</p>
-</li>
-<li>&#x7B2C;&#x4E8C;&#xFF0C;&#x5728;&#x6DFB;&#x52A0;&#x5168;&#x5C40;&#x7C7B;&#x578B;&#x540E;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x7F16;&#x8BD1;&#x5668;&#x62A5;&#x9519;&#xFF0C;&#x800C;&#x7F16;&#x8BD1;&#x901A;&#x8FC7;&#x7684;&#x95EE;&#x9898;(&#x89C1;&#x4E0B;&#x56FE;)&#xFF0C;&#x91CD;&#x542F; vscode &#x5373;&#x53EF;&#x89E3;&#x51B3;</li>
-</ol>
+<p>step 3. &#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x70B9;</p>
+<p>&#x7B2C;&#x4E00;&#xFF0C;import &#x5BFC;&#x5165;&#x662F;&#x5728; typescript2.9 &#x52A0;&#x5165;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x80FD;&#x5BFC;&#x5165;&#x7C7B;&#x578B;</p>
+<p>&#x7B2C;&#x4E8C;&#xFF0C;&#x5728;&#x6DFB;&#x52A0;&#x5168;&#x5C40;&#x7C7B;&#x578B;&#x540E;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x7F16;&#x8BD1;&#x5668;&#x62A5;&#x9519;&#xFF0C;&#x800C;&#x7F16;&#x8BD1;&#x901A;&#x8FC7;&#x7684;&#x95EE;&#x9898;(&#x89C1;&#x4E0B;&#x56FE;)&#xFF0C;&#x91CD;&#x542F; vscode &#x5373;&#x53EF;&#x89E3;&#x51B3;</p>
 <p><img src="../static/33.png" width="600" alt="33.png"></p>
 <h4 id="7-&#x5199;&#x5728;&#x6700;&#x540E;">7. &#x5199;&#x5728;&#x6700;&#x540E;</h4>
 <p>&#x6700;&#x5F00;&#x59CB;&#x4F7F;&#x7528; typescript&#xFF0C;&#x65B0;&#x624B;&#x4E0A;&#x8DEF;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x8303;&#x578B;&#xFF0C;&#x5199;&#x4E86;&#x5F88;&#x591A;&#x91CD;&#x590D;&#x7684;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#xFF0C;&#x8D39;&#x65F6;&#x53C8;&#x8D39;&#x529B;&#x3002;&#x800C;&#x4E14;&#x4FEE;&#x6539; redux &#x91CC;&#x7684; state &#x5B9A;&#x4E49;&#xFF0C;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x597D;&#x51E0;&#x5904;&#x7684; props&#xFF0C;&#x662F;&#x771F;&#x7684;&#x5F88;&#x96BE;&#x53D7;&#xFF0C;<strong>&#x611F;&#x89C9;&#x5F88;&#x4E0D;&#x503C;&#x5F97;</strong></p>
@@ -658,7 +650,7 @@ declare type ActionTypes <span class="token operator">=</span> <span class="toke
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"如何使用 typescript","level":"1.2.6","depth":2,"next":{"title":"Css","level":"1.3","depth":1,"anchor":"#other","path":"Css/README.md","ref":"./Css/README.md#other","articles":[{"title":"网格布局","level":"1.3.1","depth":2,"path":"Css/grid_layout.md","ref":"./Css/grid_layout.md","articles":[]}]},"previous":{"title":"redux-saga 中取消 fetch 请求","level":"1.2.5","depth":2,"path":"React/cancel_fetch_in_redux-saga.md","ref":"./React/cancel_fetch_in_redux-saga.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","github","-highlight","prism","prism-themes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/youniaogu"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"prism-themes":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"React/how_to_use_typescript.md","mtime":"2020-12-04T09:31:25.919Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-04T09:33:05.190Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"typescript 实践心得","level":"1.2.6","depth":2,"next":{"title":"Css","level":"1.3","depth":1,"anchor":"#other","path":"Css/README.md","ref":"./Css/README.md#other","articles":[{"title":"网格布局","level":"1.3.1","depth":2,"path":"Css/grid_layout.md","ref":"./Css/grid_layout.md","articles":[]}]},"previous":{"title":"redux-saga 中取消 fetch 请求","level":"1.2.5","depth":2,"path":"React/cancel_fetch_in_redux-saga.md","ref":"./React/cancel_fetch_in_redux-saga.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","github","-highlight","prism","prism-themes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/youniaogu"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"prism-themes":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"React/practice_experience_of_typescript.md","mtime":"2020-12-04T09:50:36.089Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-04T09:51:53.056Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
