@@ -198,6 +198,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.7" data-path="unit_test.html">
+            
+                <a href="unit_test.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -392,6 +405,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4.12" data-path="../Other/learn_about_class_through_babel.html">
+            
+                <a href="../Other/learn_about_class_through_babel.html">
+            
+                    
+                    通过 babel 看 class
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -482,16 +508,16 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">const</span> <span class="token function-variable function">mapStateToProps</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> ownProps</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">const</span> <span class="token function-variable function">mapStateToProps</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> ownProps</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">{</span>
-    counter<span class="token operator">:</span> state<span class="token punctuation">.</span>counter
+    counter<span class="token operator">:</span> state<span class="token punctuation">.</span>counter<span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">const</span> <span class="token function-variable function">mapDispatchToProps</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">dispatch<span class="token punctuation">,</span> ownProps</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">const</span> <span class="token function-variable function">mapDispatchToProps</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">dispatch<span class="token punctuation">,</span> ownProps</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">{</span>
     add<span class="token operator">:</span> <span class="token function">dispatch</span><span class="token punctuation">(</span>dispatchAdd<span class="token punctuation">)</span><span class="token punctuation">,</span>
-    reduce<span class="token operator">:</span> <span class="token function">dispatch</span><span class="token punctuation">(</span>dispatchReduce<span class="token punctuation">)</span>
+    reduce<span class="token operator">:</span> <span class="token function">dispatch</span><span class="token punctuation">(</span>dispatchReduce<span class="token punctuation">)</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
@@ -526,7 +552,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 <span class="token keyword">const</span> StoreContext <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">connect</span><span class="token punctuation">(</span><span class="token parameter">mapStateToProps<span class="token punctuation">,</span> mapDispatchToProps</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">WrappedComponent</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">WrappedComponent</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token keyword">class</span> <span class="token class-name">connect</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
       <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> <span class="token operator">&lt;</span>WrappedComponent <span class="token punctuation">{</span><span class="token operator">...</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
@@ -550,8 +576,8 @@ Provider<span class="token punctuation">.</span>propTypes <span class="token ope
   store<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span><span class="token function">shape</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     subscribe<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>func<span class="token punctuation">.</span>isRequired<span class="token punctuation">,</span>
     dispatch<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>func<span class="token punctuation">.</span>isRequired<span class="token punctuation">,</span>
-    getState<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>func<span class="token punctuation">.</span>isRequired
-  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    getState<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>func<span class="token punctuation">.</span>isRequired<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>&#x4E0A;&#x9762;&#x5C31;&#x662F;<code>connect</code>&#x548C;<code>Provider</code>&#x6700;&#x57FA;&#x7840;&#x7684;&#x5B9A;&#x4E49;</p>
@@ -669,7 +695,7 @@ Provider<span class="token punctuation">.</span>propTypes <span class="token ope
 <span class="token operator">...</span>
 </code></pre>
 <p>&#x5728;<code>shouldComponentUpdate</code>&#x4E2D;&#xFF0C;&#x6839;&#x636E;&#x524D;&#x540E;&#x7684;<code>storeState</code>&#x548C;<code>mapStateToProps</code>&#x7684;&#x7ED3;&#x679C;&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x9700;&#x8981;<code>render</code></p>
-<p><img src="../static/1.png" alt="pic1"></p>
+<p><img src="../static/screenshots/1.png" alt="pic1"></p>
 <p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x70B9;&#x51FB; add &#x6309;&#x94AE;&#x540E;&#xFF0C;&#x53EA;&#x89E6;&#x53D1;&#x4E86;<code>counter</code>&#x7684;<code>render</code>&#xFF0C;&#x8FBE;&#x5230;&#x4E86;&#x9884;&#x671F;&#x7684;&#x6548;&#x679C;&#xFF08;&#x8FD9;&#x91CC;<code>render</code>&#x4E24;&#x6B21;&#x662F;&#x56E0;&#x4E3A;<code>React.StrictMode</code>&#xFF0C;&#x8BE6;&#x7EC6;&#x53EF;&#x4EE5;&#x770B;<a href="https://github.com/facebook/react/issues/15074" target="_blank">issues</a>&#xFF09;</p>
 <p>&#x5230;&#x8FD9;&#x6B65;&#x7B80;&#x6613;<code>react-redux</code>&#x7B97;&#x662F;&#x5B8C;&#x6210;&#x4E86;</p>
 <h4 id="&#x601D;&#x8003;">&#x601D;&#x8003;</h4>
@@ -742,7 +768,7 @@ Provider<span class="token punctuation">.</span>propTypes <span class="token ope
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"如何实现 react-redux","level":"1.2.2","depth":2,"next":{"title":"react-router-dom 简单讲解","level":"1.2.3","depth":2,"path":"React/the_simple_react-router-dom.md","ref":"./React/the_simple_react-router-dom.md","articles":[]},"previous":{"title":"如何实现 redux","level":"1.2.1","depth":2,"path":"React/how_to_implement_redux.md","ref":"./React/how_to_implement_redux.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","github","-highlight","prism","prism-themes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/youniaogu"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"prism-themes":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"React/how_to_implement_react-redux.md","mtime":"2020-09-22T02:27:30.521Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-04T09:51:53.056Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"如何实现 react-redux","level":"1.2.2","depth":2,"next":{"title":"react-router-dom 简单讲解","level":"1.2.3","depth":2,"path":"React/the_simple_react-router-dom.md","ref":"./React/the_simple_react-router-dom.md","articles":[]},"previous":{"title":"如何实现 redux","level":"1.2.1","depth":2,"path":"React/how_to_implement_redux.md","ref":"./React/how_to_implement_redux.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","github","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/youniaogu"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"prism-themes":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"React/how_to_implement_react-redux.md","mtime":"2020-12-18T03:45:00.520Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-29T03:53:46.664Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -757,6 +783,10 @@ Provider<span class="token punctuation">.</span>propTypes <span class="token ope
     
         
         <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

@@ -61,7 +61,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../Css/" />
+    <link rel="next" href="unit_test.html" />
     
     
     <link rel="prev" href="cancel_fetch_in_redux-saga.html" />
@@ -191,6 +191,19 @@
             
                     
                     typescript 实践心得
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="unit_test.html">
+            
+                <a href="unit_test.html">
+            
+                    
+                    单元测试
             
                 </a>
             
@@ -385,6 +398,19 @@
             
                     
                     记一个 react 问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../Other/learn_about_class_through_babel.html">
+            
+                <a href="../Other/learn_about_class_through_babel.html">
+            
+                    
+                    通过 babel 看 class
             
                 </a>
             
@@ -600,12 +626,12 @@ declare type ActionTypes <span class="token operator">=</span> <span class="toke
 <p>step 3. &#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x70B9;</p>
 <p>&#x7B2C;&#x4E00;&#xFF0C;import &#x5BFC;&#x5165;&#x662F;&#x5728; typescript2.9 &#x52A0;&#x5165;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x80FD;&#x5BFC;&#x5165;&#x7C7B;&#x578B;</p>
 <p>&#x7B2C;&#x4E8C;&#xFF0C;&#x5728;&#x6DFB;&#x52A0;&#x5168;&#x5C40;&#x7C7B;&#x578B;&#x540E;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x7F16;&#x8BD1;&#x5668;&#x62A5;&#x9519;&#xFF0C;&#x800C;&#x7F16;&#x8BD1;&#x901A;&#x8FC7;&#x7684;&#x95EE;&#x9898;(&#x89C1;&#x4E0B;&#x56FE;)&#xFF0C;&#x91CD;&#x542F; vscode &#x5373;&#x53EF;&#x89E3;&#x51B3;</p>
-<p><img src="../static/33.png" width="600" alt="33.png"></p>
+<p><img src="../static/screenshots/33.png" width="600" alt="33.png"></p>
 <h4 id="7-&#x5199;&#x5728;&#x6700;&#x540E;">7. &#x5199;&#x5728;&#x6700;&#x540E;</h4>
 <p>&#x6700;&#x5F00;&#x59CB;&#x4F7F;&#x7528; typescript&#xFF0C;&#x65B0;&#x624B;&#x4E0A;&#x8DEF;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x8303;&#x578B;&#xFF0C;&#x5199;&#x4E86;&#x5F88;&#x591A;&#x91CD;&#x590D;&#x7684;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#xFF0C;&#x8D39;&#x65F6;&#x53C8;&#x8D39;&#x529B;&#x3002;&#x800C;&#x4E14;&#x4FEE;&#x6539; redux &#x91CC;&#x7684; state &#x5B9A;&#x4E49;&#xFF0C;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x597D;&#x51E0;&#x5904;&#x7684; props&#xFF0C;&#x662F;&#x771F;&#x7684;&#x5F88;&#x96BE;&#x53D7;&#xFF0C;<strong>&#x611F;&#x89C9;&#x5F88;&#x4E0D;&#x503C;&#x5F97;</strong></p>
 <p>&#x540E;&#x9762;&#x6162;&#x6162;&#x5B66;&#x4F1A;&#x5982;&#x4F55;&#x8FD0;&#x7528;&#x8303;&#x578B;&#xFF0C;&#x7ED3;&#x5408; redux &#x5355;&#x4E00;&#x6570;&#x636E;&#x6E90;&#x8BBE;&#x8BA1;&#xFF0C;&#x6570;&#x636E;&#x81F3;&#x4E0A;&#x800C;&#x4E0B;&#x4F20;&#x9012;&#xFF0C;&#x7C7B;&#x578B;&#x4E5F;&#x53EF;&#x4EE5;&#x968F;&#x7740;&#x6570;&#x636E;&#x81F3;&#x4E0A;&#x800C;&#x4E0B;&#x4F20;&#x9012;&#xFF0C;&#x4E0D;&#x7528;&#x5728;&#x5404;&#x4E2A;&#x5730;&#x65B9;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#xFF0C;<strong>&#x7528;&#x66F4;&#x5C11;&#x7684;&#x4EE3;&#x7801;&#x83B7;&#x5F97;&#x66F4;&#x591A;&#x7684;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#xFF0C;typescript &#x6162;&#x6162;&#x9999;&#x4E86;&#x8D77;&#x6765;</strong></p>
 <p>typescript &#x662F; javascript &#x7684;&#x8D85;&#x96C6;&#xFF0C;&#x8BED;&#x6CD5;&#x4E0A;&#x5B66;&#x4E60;&#x8D77;&#x6765;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x8981;&#x60F3;&#x6709;&#x4E2A;&#x597D;&#x7684;&#x4F53;&#x9A8C;&#x548C;&#x5B9E;&#x8DF5;&#xFF0C;&#x6CA1;&#x6709;&#x60F3;&#x8C61;&#x4E2D;&#x90A3;&#x4E48;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x8DDF;&#x753B;&#x9A6C;&#x4E00;&#x6837;</p>
-<p><img src="../static/32.png" width="300" alt="32.png"></p>
+<p><img src="../static/screenshots/32.png" width="300" alt="32.png"></p>
 <p>&#x5E0C;&#x671B;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x5BF9;&#x4F60;&#x6709;&#x6240;&#x5E2E;&#x52A9;&#xFF0C;&#x8C22;&#x8C22;&#xFF01;</p>
 
                                 
@@ -639,7 +665,7 @@ declare type ActionTypes <span class="token operator">=</span> <span class="toke
                 </a>
                 
                 
-                <a href="../Css/#other" class="navigation navigation-next " aria-label="Next page: Css">
+                <a href="unit_test.html" class="navigation navigation-next " aria-label="Next page: 单元测试">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -650,7 +676,7 @@ declare type ActionTypes <span class="token operator">=</span> <span class="toke
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"typescript 实践心得","level":"1.2.6","depth":2,"next":{"title":"Css","level":"1.3","depth":1,"anchor":"#other","path":"Css/README.md","ref":"./Css/README.md#other","articles":[{"title":"网格布局","level":"1.3.1","depth":2,"path":"Css/grid_layout.md","ref":"./Css/grid_layout.md","articles":[]}]},"previous":{"title":"redux-saga 中取消 fetch 请求","level":"1.2.5","depth":2,"path":"React/cancel_fetch_in_redux-saga.md","ref":"./React/cancel_fetch_in_redux-saga.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","github","-highlight","prism","prism-themes"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/youniaogu"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"prism-themes":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"React/practice_experience_of_typescript.md","mtime":"2020-12-04T09:50:36.089Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-04T09:51:53.056Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"typescript 实践心得","level":"1.2.6","depth":2,"next":{"title":"单元测试","level":"1.2.7","depth":2,"path":"React/unit_test.md","ref":"./React/unit_test.md","articles":[]},"previous":{"title":"redux-saga 中取消 fetch 请求","level":"1.2.5","depth":2,"path":"React/cancel_fetch_in_redux-saga.md","ref":"./React/cancel_fetch_in_redux-saga.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","github","-highlight","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-atom-dark.css"]},"github":{"url":"https://github.com/youniaogu"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"prism-themes":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"React/practice_experience_of_typescript.md","mtime":"2020-12-18T03:45:00.458Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-29T03:53:46.664Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -665,6 +691,10 @@ declare type ActionTypes <span class="token operator">=</span> <span class="toke
     
         
         <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
