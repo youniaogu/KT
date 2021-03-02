@@ -22,5 +22,3 @@ var lengthOfLongestSubstring = function (s) {
 
   return max;
 };
-
-const a = lengthOfLongestSubstring("abca");
