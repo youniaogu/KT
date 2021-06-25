@@ -53,7 +53,7 @@
 
 <p class="float_text margin_bottom3">
   <img class="icon" src="./puzzle.png" />自我介绍：
-  <span class="font_size15">从事前端开发工作两年半，主要的技术栈和未来发展方向是React，熟悉移动端H5和中台系统的开发，有独立开发的能力，热爱前端，喜欢研究和技术分享</span>
+  <span class="font_size15">主要的技术栈和未来发展方向是React，熟悉移动端H5和中台系统的开发，有独立开发的能力，热爱前端，喜欢研究和技术分享</span>
 </p>
 <ul class="margin_bottom10">
   <li class="margin_left8">熟练使用 React、Redux、Redux-saga、React-redux 等库，掌握前端状态管理</li>
